@@ -18,7 +18,7 @@ const Login = () => {
   };
 
   const loginHandler = () => {
-    axios.post("http://localhost:3001/login", inputs)
+    axios.post("https://vercel.com/shyno-s-alexanders-projects/blood-bank-backend/A6mTGAgb4pTeorj1aYTBj5fcz5ti/login", inputs)
     .then((res) => {
       const { message, token, name, role } = res.data;
       //setMessage(message);

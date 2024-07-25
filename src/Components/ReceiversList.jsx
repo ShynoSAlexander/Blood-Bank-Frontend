@@ -27,7 +27,7 @@ const ReceiversList = () => {
 
     const fetchReceivers = async () => {
         try {
-            const response = await axios.get('http://localhost:3001/receivers', {
+            const response = await axios.get('https://vercel.com/shyno-s-alexanders-projects/blood-bank-backend/A6mTGAgb4pTeorj1aYTBj5fcz5ti/receivers', {
                 headers: {
                     Authorization: localStorage.getItem('token')
                 }
@@ -41,7 +41,7 @@ const ReceiversList = () => {
     const onApproveRequest = async (id) => {
         try {
             // Logic to approve the request
-            await axios.put(`http://localhost:3001/admin/requests/approve/${id}`);
+            await axios.put(`https://vercel.com/shyno-s-alexanders-projects/blood-bank-backend/A6mTGAgb4pTeorj1aYTBj5fcz5ti/admin/requests/approve/${id}`);
             alert("Acceptance Email has been sent to the user");
             fetchReceivers(); // Refresh receiver list after approval
         } catch (error) {
@@ -52,7 +52,7 @@ const ReceiversList = () => {
     const onRejectRequest = async (id) => {
         try {
             // Logic to reject the request
-            await axios.delete(`http://localhost:3001/admin/requests/reject/${id}`);
+            await axios.delete(`https://vercel.com/shyno-s-alexanders-projects/blood-bank-backend/A6mTGAgb4pTeorj1aYTBj5fcz5ti/admin/requests/reject/${id}`);
             alert("Rejection Email has been sent");
             // Remove the rejected request from the state
             setReceivers(receivers.filter(receiver => receiver._id !== id));
@@ -62,7 +62,7 @@ const ReceiversList = () => {
     };
     const onDeleteDonor = async (id) => {
         try {
-            await axios.delete(`http://localhost:3001/admin/donors/delete/${id}`);
+            await axios.delete(`https://vercel.com/shyno-s-alexanders-projects/blood-bank-backend/A6mTGAgb4pTeorj1aYTBj5fcz5ti/admin/donors/delete/${id}`);
             fetchReceivers(); 
         } catch (error) {
             console.error('Error deleting donor:', error);

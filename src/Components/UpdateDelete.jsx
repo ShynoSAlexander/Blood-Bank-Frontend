@@ -16,7 +16,7 @@ const UpdateDelete = () => {
 
     const fetchDonors = async () => {
         try {
-            const response = await axios.get('http://localhost:3001/donors', {
+            const response = await axios.get('https://vercel.com/shyno-s-alexanders-projects/blood-bank-backend/A6mTGAgb4pTeorj1aYTBj5fcz5ti/donors', {
                 headers: {
                     Authorization: localStorage.getItem('token')
                 }
@@ -29,7 +29,7 @@ const UpdateDelete = () => {
 
     const onDeleteDonor = async (id) => {
         try {
-            await axios.delete(`http://localhost:3001/admin/donors/delete/${id}`);
+            await axios.delete(`https://vercel.com/shyno-s-alexanders-projects/blood-bank-backend/A6mTGAgb4pTeorj1aYTBj5fcz5ti/admin/donors/delete/${id}`);
             fetchDonors();
         } catch (error) {
             console.error('Error deleting donor:', error);
@@ -38,7 +38,7 @@ const UpdateDelete = () => {
 
     const onUpdateDonor = async (id) => {
         try {
-            await axios.put(`http://localhost:3001/admin/donors/update/${id}`, editedData);
+            await axios.put(`https://vercel.com/shyno-s-alexanders-projects/blood-bank-backend/A6mTGAgb4pTeorj1aYTBj5fcz5ti/admin/donors/update/${id}`, editedData);
             fetchDonors();
             setEditingDonor(null);
         } catch (error) {

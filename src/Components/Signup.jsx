@@ -39,7 +39,7 @@ const Signup = () => {
       return;
     }
     console.log("Clicked");
-    axios.post("http://localhost:3001/add", inputs)
+    axios.post("https://vercel.com/shyno-s-alexanders-projects/blood-bank-backend/A6mTGAgb4pTeorj1aYTBj5fcz5ti/add", inputs)
       .then((res) => {
         console.log(res);
         alert(res.data.message);

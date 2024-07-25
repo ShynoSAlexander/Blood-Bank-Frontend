@@ -32,7 +32,7 @@ const AdminRequestForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3001/requests/admin-add', formData);
+      const response = await axios.post('https://vercel.com/shyno-s-alexanders-projects/blood-bank-backend/A6mTGAgb4pTeorj1aYTBj5fcz5ti/requests/admin-add', formData);
       alert("Donor added Successfully.");
       navigate('/ad');
       setFormData({

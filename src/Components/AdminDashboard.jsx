@@ -11,7 +11,7 @@ const DonorDashboard = () => {
   useEffect(() => {
     const fetchDonors = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/donors');
+        const response = await axios.get('https://vercel.com/shyno-s-alexanders-projects/blood-bank-backend/A6mTGAgb4pTeorj1aYTBj5fcz5ti/donors');
         setDonors(response.data);
       } catch (error) {
         console.error('Error fetching donors:', error);
